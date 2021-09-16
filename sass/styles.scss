@@ -1,0 +1,309 @@
+/* reseteo del CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+// import
+@import "propiedades";
+@import "estructura";
+
+/* index */
+/* main con poster e info de la peli */
+section {
+    main {
+        &.main {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            @include mobile {display: inline;};
+            @include tablet {grid-template-columns: 1fr 1fr;};
+            div {
+                &.main__foto {
+                    padding-left: 40px;
+                    @include mobile {padding: 10px; grid-template: 450px 2fr / 2fr;}
+                }
+            }
+            div {
+                h1 {
+                    text-transform: uppercase;
+                    font-size: 45px;
+                    @include h;
+                    @include mobile {font-size: 30px;}
+                }
+                h2 {
+                    font-family: "Rubik", solid;
+                    color: rgb(25, 25, 63);
+                    text-align: center;
+                    margin: 30px auto;
+                    @include laptop {display: none};
+                }
+                p {
+                    @include p;
+                    @include tablet {font-size: 15px;};
+                }
+            }
+        }
+    }
+}
+
+/* trailer de la película */
+section {
+    &.video {
+        display: grid;
+        grid-template-rows: 1fr 5fr;
+        @include mobile {grid-template-rows: 1fr 2fr;};
+        @include tablet {grid-template-rows: 1fr 3fr;};
+        @include laptop {grid-template-rows: 1fr 3fr;};
+        div {
+            h2 {
+                &.segundoTitulo {
+                    @include h;
+                    font-size: 35px;
+                    @include mobile {font-size: 25px;}
+                }
+            }
+        }
+        div {
+            &.embed-responsive {
+                video {
+                    &.embed-responsive-item {
+                        display: block;
+                        margin: 25px auto;
+                        height: 500px;
+                        width: auto;
+                        @include mobile {width: 300px; height: auto;};
+                        @include tablet {width: 1fr; height: auto;};
+                        @include laptop {width: 1fr; height: auto;};
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* reviews */
+section {
+    &.container {
+        div {
+            &.row {
+                h3 {
+                    @include h;
+                    font-size: 35px;
+                    @include mobile {font-size: 25px;}
+                }
+                div {
+                    &.col {
+                        p {
+                            @include p;
+                            background-color: $colorPrincipal;
+                            padding: 20px 30px;
+                            border:rgb(111, 191, 245) 2px solid;
+                            color:rgb(164, 181, 201);
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+
+/* director */
+section {
+    div {
+        &.seccion-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 450px 300px 400px;
+            div {
+                &.foto-y-texto {
+                    display: flex;
+                }
+            }
+            div {
+                h1 {
+                    text-transform: uppercase;
+                    font-size: 45px;
+                    @include h;
+                }
+                p {
+                    @include p;
+                    margin-top: 40px;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+
+/* películas conocidas del director */
+section {
+    h2 {
+        &.segundoTitulo {
+            @include h;
+            font-size: 35px;
+        }
+    }
+    div {
+        &.peliculas {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            margin: 15px;
+            border-color: black solid;
+            div {
+                &.card {
+                    background-color: rgb(0, 27, 58);
+                    margin-top: 20px;
+                }
+                div {
+                    &.card-body {
+                        h3 {
+                            font-family: "Rubik", solid;
+                            font-weight: bold;
+                            font-size: 25px;
+                            color: rgb(110, 110, 202);
+                        }
+                        p {
+                            &.card-text {
+                                font-family: "Noto Sans TC";
+                                color: rgba(233, 225, 225, 0.808);
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* cinematografia */
+
+section {
+    &.foto-y-texto {
+        display: flex;
+        div {
+            p {
+                @include p;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+/* stills de la película */
+section {
+    div {
+        &.stills {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            img {
+                &.stills__imagen {
+                    margin: 3px;
+                    width: 300px;
+                    height: auto;
+                    transition: transform .3s;
+                    &:hover {transform: scale(1.5);}
+                }
+            }
+        }
+    }
+}
+
+/* personajes */
+section {
+    h1 {
+        text-transform: uppercase;
+        font-size: 45px;
+        @include h;
+    }
+    div {
+        &.personaje {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            grid-template-rows: auto;
+            gap: 20px;
+        }
+    }
+    div {
+        &.personaje__persona {
+            display: flex;
+            background-color: rgb(67, 87, 110);
+        }
+    }
+    div {
+        img {
+            &.personaje__foto {
+                padding: 40px;
+                width: 300px;
+                height: auto;
+            }
+        }
+    }
+    div {
+        p {
+            &.personaje__nombre {
+                font-family: "Rubik", solid;
+                text-transform: uppercase;
+                font-size: 40px;
+                color: rgb(10, 10, 65);
+            }
+        }
+        p {
+            @include p;
+        }
+    }
+}
+
+/* contacto */
+section {
+    &.foto-y-texto {
+        display: flex;
+        div {
+            h1 {
+                &#pregunta {
+                    font-size: 30px;
+                    text-decoration: none;
+                }
+            }
+            h2 {
+                &#formulario {
+                    text-decoration: none;
+                    color: rgb(25, 25, 63);
+                    @include h;
+                }
+            }
+            form {
+                width: 500px;
+                padding: 40px;
+                border-radius: 5px;
+                margin: 50px auto;
+                background-color: rgb(18, 59, 105);
+                div {
+                    padding: 5px;
+                    label {
+                        display: inline;
+                        color: rgb(233, 225, 225);
+                        font-family: "Noto Sans TC", solid;
+                        letter-spacing: 2px;
+                    }
+                    input {
+                        &#name {
+                            @include form;
+                        }
+                    }
+                    input {
+                        &#mail {
+                            @include form;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

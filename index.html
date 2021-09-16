@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- description y keywords -->
+    <meta name="description" content="Sitio oficial de la película The Thing de 1982">
+    <meta name="keywords" content="thing, 1982, carpenter, sinopsis, posters, trailer, review">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Raleway:wght@700&family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>The Thing (1982)</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar"><!-- contiene logo de la película y menú del sitio web -->
+            <div class="container-fluid header__navegacion">
+                <img class="header__logo" src="imagenes/The_Thing_1982.png" alt="logo the thing">
+                <ul class="nav header__menu">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="paginas/director.html">Director</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="paginas/cinematografia.html">Cinematografía</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="paginas/personajes.html">Personajes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="paginas/contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section><!-- poster, título y sinopsis de la película -->
+        <main class="main">
+            <!-- carousel con posters -->
+            <div class="container main__foto">
+                <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./imagenes/posterthething.jpg" class="d-block w-100" alt="poster de la pelicula">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagenes/posterthething1.jpg" class="d-block w-100" alt="variante del poster de la pelicula">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagenes/posterthething2.jpg" class="d-block w-100" alt="otra variante del poster de la pelicula">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagenes/posterthething3.jpg" class="d-block w-100" alt="otra variante del poster de la pelicula">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imagenes/posterthething4.jpg" class="d-block w-100" alt="otra variante del poster de la pelicula">
+                    </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <!-- título y sinopsis -->
+            <div>
+                <h1>The Thing</h1>
+                <h2>EL HOMBRE ES EL LUGAR MÁS CÁLIDO PARA ESCONDERSE</h2>
+            <p>En la remota Antártida, un grupo de científicos de investigación estadounidenses son interrumpidos en su campamento base por un helicóptero disparando contra un perro de trineo. Cuando acogen al perro, este toma una forma aborrecible atacando brutalmente tanto a los seres humanos como a los caninos del campamento y pronto descubren la horrible verdad de que la bestia puede asumir la forma de sus víctimas. Un ingenioso piloto de helicóptero y el médico del campamento lideran a la tripulación en una batalla desesperada y sangrienta contra la cruel criatura antes de que los elimine a todos, uno por uno.</p>
+            </div>
+        </main>
+    </section>
+
+    <hr>
+
+        <section class="video"><!-- trailer de la película -->
+            <div>
+                <h2 class="segundoTitulo">Trailer</h2>
+            </div>
+            <div class="embed-responsive">
+                <video src="./video/y2mate.com - The Thing 1982 Trailer_360p.mp4" class="embed-responsive-item embed-responsive-21by9" controls>Tu navegador no implementa el elemento video</video>
+            </div>
+        </section>
+
+    <hr>
+
+        <section class="container"><!-- reviews de la gente (puntuación y opiniones) -->
+            <div class="row"><!-- con bootstrap -->
+                <h3>Reviews</h3>
+                <div class="col">
+                    <p>100% pure horror. 100% complete paranoia. 100% practical effects. 100% proof that horror doesn't need CGI. 100% inimitable. 100% Carpenter. 100% timeless. 100% terrifying. Still. 100% visual masterpiece. 100% mold breaking. 1000% one of my favourite horror films ever made. P.S.: Math was never my strong point.<br><br><small class="text-muted">-DirkH vía Letterboxd.</small></p>
+                </div>
+                <div class="col">
+                    <p>This was... a blast. Such a great time. Watched on unrestored 70mm in a packed and very sweaty theatre. Two minutes in I realized I was thirsty and thought to myself "I'll find a dull moment to get up and go grab some water" but here's the twist...<br>
+                    there was no dull part.<br><br><small class="text-muted">-Karsten vía Letterboxd.</small></p>
+                </div>
+                <div class="col">
+                    <p>Caught a 35mm midnight screening at the Music Box Theatre. I’ve always loved this film but I was shocked to discover how thematically relevant this still is, especially over the last year and a half. Still has maybe the best practical effects of all time. John Carpenter is one of the best to ever do it.<br><br><small class="text-muted">-Luc vía Letterboxd.</small></p>
+                </div>
+            </div>
+        </section>
+
+    <hr>
+    
+        <section><!-- redes sociales -->
+            <footer>
+                <div class="footer">
+                    <a class="footer__enlace" href="#">Youtube</a>
+                    <a class="footer__enlace" href="#">Instagram</a>
+                    <a class="footer__enlace" href="#">Twitter</a>
+                    <a class="footer__enlace" href="#">Facebook</a>
+                </div>
+            </footer>
+        </section>
+
+<!-- script de bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

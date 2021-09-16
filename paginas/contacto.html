@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de contacto para mandar dudas y/o sugerencias">
+    <meta name="keywords" content="thing, 1982, carpenter, contacto, email, pregunta, sugerencia, queja">
+    <link rel="preconnect" class="redes-yt" href="https://fonts.googleapis.com">
+    <link rel="preconnect" class="redes-yt" href="https://fonts.gstatic.com" crossorigin>
+    <link class="redes-yt" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Raleway:wght@700&family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" class="redes-yt" href="../css/styles.css">
+    <title>Contacto • The Thing (1982)</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar"><!-- contiene logo de la película y menú del sitio web -->
+            <div class="container-fluid header__navegacion">
+                <img class="header__logo" src="../imagenes/The_Thing_1982.png" alt="logo the thing">
+                <ul class="nav header__menu">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="director.html">Director</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cinematografia.html">Cinematografía</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="personajes.html">Personajes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="foto-y-texto"><!-- poster de la película y formulario para tener un contacto con el usuario -->
+        <div>
+            <img class="foto__imagen" src="../imagenes/the-thing-phone-wallpaper.jpg" alt="poster de la pelicula" height="750" width="auto">
+        </div>
+        <div>
+            <h1 id="pregunta">¿Te gustaría que cambiemos algo de la página o dejarnos algún comentario?</h1>
+            <h2 id="formulario">¡Llená este formulario!</h2>
+
+            <form action="" method="GET">
+
+                <div>
+                <label for="name">Nombre y Apellido:</label>
+                <input id="name" type="text">
+                </div>
+
+                <div>
+                <label for="mail">Dirección de e-mail:</label>
+                <input id="mail" type="email">
+                </div>
+
+                <div>
+                <label for="country-select">País:</label>
+                <select name="country-select" id="pais">
+                    <option value="arg">Argentina</option>
+                    <option value="bra">Brasil</option>
+                    <option value="chi">Chile</option>
+                    <option value="uru">Uruguay</option>
+                </select>
+                </div>
+
+                <div>
+                <label>¿Es urgente?</label>
+                <input type="radio" name=registro id=si><label>Sí</label>
+                <input type="radio" name=registro id=no><label>No</label>
+                </div>
+
+                <div>
+                <label>Comentario:</label>
+                <textarea cols="50" rows="6"></textarea>
+                </div>
+
+                <div>
+                <input type="submit" name="enviar">
+                <input type="reset">
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <hr>
+
+    <section><!-- redes sociales -->
+        <footer>
+            <div class="footer">
+                <a class="footer__enlace" href="#">Youtube</a>
+                <a class="footer__enlace" href="#">Instagram</a>
+                <a class="footer__enlace" href="#">Twitter</a>
+                <a class="footer__enlace" href="#">Facebook</a>
+            </div>
+        </footer>
+    </section>
+
+    <!-- script de bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

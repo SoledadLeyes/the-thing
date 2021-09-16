@@ -1,0 +1,55 @@
+// variables
+$colorPrincipal: rgb(0, 53, 88);
+$colorSecundario: rgb(7, 7, 29);
+
+// mixins
+@mixin h { 
+    font-family: "Rubik", solid;
+    text-decoration: underline;
+    color: $colorPrincipal;
+    text-align: center;
+    margin: 30px auto;
+    font-weight: bold;
+}
+
+@mixin p {
+    font-family: "Noto Sans TC";
+    color: $colorSecundario;
+    text-align: center;
+    font-size: 20px;
+    margin: 25px 20px;
+    @include mobile {font-size: 15px;};
+}
+
+@mixin table {
+    border: 3px solid rgb(13, 0, 43);
+    font-family: "Noto Sans TC";
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin form {
+    width: 200px;
+    padding: 3px 10px;
+    border: 1px solid #000424;
+    border-radius: 3px;
+    background-color:white;
+    margin: 8px 0;
+    display: inline;
+}
+
+// mixins para responsive
+
+@mixin mobile {
+    @media screen and (max-width: 480px) {@content};
+}
+
+@mixin tablet {
+    @media screen and (min-width: 481px) and (max-width: 768px) {@content};
+}
+
+@mixin laptop {
+    @media screen and (min-width: 769px) and (max-width: 1024px) {@content};
+}
