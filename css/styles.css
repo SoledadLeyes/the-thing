@@ -371,8 +371,8 @@ section div.seccion-grid {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 450px 300px 400px;
-      grid-template-rows: 450px 300px 400px;
+  -ms-grid-rows: 1fr 1/2fr 1fr;
+      grid-template-rows: 1fr 1/2fr 1fr;
 }
 
 section div.seccion-grid div.foto-y-texto {
@@ -381,9 +381,28 @@ section div.seccion-grid div.foto-y-texto {
   display: flex;
 }
 
-section div.seccion-grid div h1 {
+@media screen and (max-width: 480px) {
+  section div.seccion-grid div.foto-y-texto {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+section div.seccion-grid div.foto-y-texto div img.foto__imagen {
+  height: 400px;
+  width: auto;
+}
+
+@media screen and (max-width: 480px) {
+  section div.seccion-grid div.foto-y-texto div img.foto__imagen {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+section div.seccion-grid div.foto-y-texto div h1 {
   text-transform: uppercase;
-  font-size: 45px;
+  font-size: 40px;
   font-family: "Rubik", solid;
   text-decoration: underline;
   color: #003558;
@@ -392,7 +411,13 @@ section div.seccion-grid div h1 {
   font-weight: bold;
 }
 
-section div.seccion-grid div p {
+@media screen and (max-width: 480px) {
+  section div.seccion-grid div.foto-y-texto div h1 {
+    font-size: 30px;
+  }
+}
+
+section div.seccion-grid div.foto-y-texto div p {
   font-family: "Noto Sans TC";
   color: #07071d;
   text-align: center;
@@ -403,8 +428,26 @@ section div.seccion-grid div p {
 }
 
 @media screen and (max-width: 480px) {
-  section div.seccion-grid div p {
+  section div.seccion-grid div.foto-y-texto div p {
     font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section div.seccion-grid div.foto-y-texto div p {
+    margin-top: 5px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  section div.seccion-grid div.foto-y-texto div p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  section div.seccion-grid div.foto-y-texto div p {
+    font-size: 20px;
   }
 }
 
@@ -428,6 +471,35 @@ section div.peliculas {
       grid-template-rows: 1fr 1fr;
   margin: 15px;
   border-color: black solid;
+}
+
+@media screen and (max-width: 480px) {
+  section div.peliculas {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  section div.peliculas {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    margin-left: 50px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  section div.peliculas {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
 }
 
 section div.peliculas div.card {
@@ -455,6 +527,31 @@ section.foto-y-texto {
   display: flex;
 }
 
+@media screen and (max-width: 480px) {
+  section.foto-y-texto {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+section.foto-y-texto div.foto img.foto__imagen {
+  height: 400px;
+  width: auto;
+}
+
+@media screen and (max-width: 480px) {
+  section.foto-y-texto div.foto img.foto__imagen {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section.foto-y-texto div h1 {
+    font-size: 30px;
+  }
+}
+
 section.foto-y-texto div p {
   font-family: "Noto Sans TC";
   color: #07071d;
@@ -470,7 +567,25 @@ section.foto-y-texto div p {
   }
 }
 
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  section.foto-y-texto div p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  section.foto-y-texto div p {
+    font-size: 25px;
+  }
+}
+
 /* stills de la película */
+@media screen and (max-width: 480px) {
+  section div h2.segundoTitulo {
+    font-size: 20px;
+  }
+}
+
 section div.stills {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -513,6 +628,12 @@ section h1 {
   font-weight: bold;
 }
 
+@media screen and (max-width: 480px) {
+  section h1 {
+    font-size: 30px;
+  }
+}
+
 section div.personaje {
   display: -ms-grid;
   display: grid;
@@ -523,11 +644,43 @@ section div.personaje {
   gap: 20px;
 }
 
+@media screen and (max-width: 480px) {
+  section div.personaje {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  section div.personaje {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  section div.personaje {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 section div.personaje__persona {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-color: #43576e;
+}
+
+@media screen and (max-width: 480px) {
+  section div.personaje__persona {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
 }
 
 section div img.personaje__foto {
@@ -564,9 +717,26 @@ section.foto-y-texto {
   display: flex;
 }
 
+section.foto-y-texto div img.foto-formulario {
+  margin-left: 40px;
+}
+
+@media screen and (max-width: 480px) {
+  section.foto-y-texto div img.foto-formulario {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  section.foto-y-texto div img.foto-formulario {
+    display: none;
+  }
+}
+
 section.foto-y-texto div h1#pregunta {
   font-size: 30px;
   text-decoration: none;
+  margin: 20px 10px;
 }
 
 section.foto-y-texto div h2#formulario {
@@ -588,6 +758,12 @@ section.foto-y-texto div form {
   background-color: #123b69;
 }
 
+@media screen and (max-width: 480px) {
+  section.foto-y-texto div form {
+    width: 100%;
+  }
+}
+
 section.foto-y-texto div form div {
   padding: 5px;
 }
@@ -599,23 +775,36 @@ section.foto-y-texto div form div label {
   letter-spacing: 2px;
 }
 
-section.foto-y-texto div form div input#name {
+section.foto-y-texto div form div input#name, section.foto-y-texto div form div input#mail {
   width: 200px;
-  padding: 3px 10px;
-  border: 1px solid #000424;
+  padding: 2px 10px;
+  border: 1px solid #3f425a;
   border-radius: 3px;
   background-color: white;
   margin: 8px 0;
   display: inline;
 }
 
-section.foto-y-texto div form div input#mail {
-  width: 200px;
-  padding: 3px 10px;
-  border: 1px solid #000424;
-  border-radius: 3px;
-  background-color: white;
-  margin: 8px 0;
-  display: inline;
+section.foto-y-texto div form div input#envio, section.foto-y-texto div form div input#reset {
+  background-color: #202072;
+  color: #a4b5c9;
+  font-family: "Noto Sans TC", solid;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+section.foto-y-texto div form div select#pais {
+  background-color: #202072;
+  color: #a4b5c9;
+  font-family: "Noto Sans TC", solid;
+}
+
+section.foto-y-texto div form div textarea {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 100px;
+  max-height: 200px;
+  max-width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
